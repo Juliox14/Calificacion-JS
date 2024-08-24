@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="formulario">
+        <h1>Impresora de grado en letras</h1>
+        <label for="calificacion1">Ingrese calificación númerica:</label>
+        <input type="number" max="100" min="0" id="calificacion1" name="calificacion1">
+
+        <button id="boton_imprimir" onclick="calcular()">Calcular</button>
+    </div>
+
+    <div class="contenedor_impresora">
+        <div class="hoja_entra">
+            <div class="hoja_entrada"></div>
+        </div>
+        <div class="bandeja_entrada"></div>
+        <div class="impresora">
+            <div class="luces_impresora">
+                <div class="luz_verde"></div>
+                <div class="luz_roja"></div>
+            </div>
+            <div class="linea_impresora">
+                <div></div>
+            </div>
+            <div class="bandeja_salida">
+                <div></div>
+            </div>
+            <div class="linea_debajo_impresora">
+                <div></div>
+            </div>
+        </div>
+        <div class="hoja_sale">
+            <div id="hoja" class="hoja_salida">
+                <img id="img_cal" src="./img/A.png" alt="Nota">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

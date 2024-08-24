@@ -1,0 +1,246 @@
+body {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFEFF0;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.formulario input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #dfdfdf87;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%;
+}
+
+.contenedor_impresora {
+    position: relative;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bandeja_entrada {
+    background-color: #2D2A2B;
+    width: 250px;
+    height: 100px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.impresora {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 180px;
+    background-color: #36383A;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.luces_impresora {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    padding: 5px;
+    gap: 5px;
+}
+
+.luces_impresora div {
+    width: 20px;
+    height: 10px;
+    border-radius: 2px;
+}
+
+.luz_roja {
+    background-color: red;
+}
+
+.luz_verde {
+    background-color: green;
+}
+
+.linea_impresora {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.linea_impresora div {
+    width: 105%;
+    height: 10px;
+    background-color: #595659;
+}
+
+.bandeja_salida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+    z-index: 2;
+}
+
+.bandeja_salida div {
+    background-color: #0b0a0a;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.linea_debajo_impresora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -1px;
+}
+
+.linea_debajo_impresora div {
+    width: 105%;
+    height: 40px;
+    background-color: #2A2A2A;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.hoja_entra {
+    position: absolute;
+    top: 0;
+    height: 200px;
+}
+
+@keyframes hojaEntrada {
+    0% {
+        margin-top: 0px;
+    }
+
+    50% {
+        margin-top: 100px;
+    }
+
+    100% {
+        margin-top: 200px;
+    }
+
+}
+
+.hoja_entrada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.hoja_entrada.animar {
+    animation: hojaEntrada 10s forwards;
+}
+
+
+
+.hoja_sale {
+    position: absolute;
+    bottom: -220px;
+    height: 260px;
+    left: 110px;
+    width: 220px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.hoja_salida {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 200px;
+    height: 250px;
+    margin-top: -250px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 1s ease-in-out;
+}
+
+.hoja_salida.animar {
+    animation: hojaSalida 10s forwards;
+}
+
+@keyframes hojaSalida {
+    0% {
+        margin-top: -280px;
+    }
+
+    25% {
+        margin-top: -200px;
+    }
+
+    50% {
+        margin-top: -150px;
+    }
+
+    75% {
+        margin-top: -100px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+.hoja_salida img {
+    width: 50px;
+}
+
+.hoja_salida div {
+    margin-top: 15px;
+    height: 5px;
+    width: 100%;
+    background-color: #9b969b;
+    opacity: 0.2;
+}
